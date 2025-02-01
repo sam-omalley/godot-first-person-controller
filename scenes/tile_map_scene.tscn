@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dqowtosa37e63"]
+[gd_scene load_steps=46 format=4 uid="uid://dqowtosa37e63"]
 
 [ext_resource type="PackedScene" uid="uid://cmxuxdyst2oll" path="res://scenes/road.tscn" id="1_en4os"]
 [ext_resource type="PackedScene" uid="uid://b5j6hoio55sct" path="res://assets/models/border-pillar.glb" id="2_f224w"]
@@ -11,6 +11,28 @@
 [ext_resource type="PackedScene" uid="uid://c58hl54cjex5g" path="res://assets/models/stone-wall-curve.glb" id="8_of6o5"]
 [ext_resource type="PackedScene" uid="uid://7w61tfkqrg5q" path="res://assets/models/stone-wall-damaged.glb" id="9_bjvn7"]
 [ext_resource type="PackedScene" uid="uid://wmphwvveskyj" path="res://assets/models/stone-wall.glb" id="10_7kk7p"]
+[ext_resource type="PackedScene" uid="uid://dcydrl0qeoih3" path="res://assets/models/fence-damaged.glb" id="12_trr02"]
+[ext_resource type="PackedScene" uid="uid://264dc7xe3exg" path="res://assets/models/fence-gate.glb" id="13_e7xs6"]
+[ext_resource type="PackedScene" uid="uid://ce2x1u73fp0of" path="res://assets/models/fence.glb" id="14_mm7ab"]
+[ext_resource type="PackedScene" uid="uid://bxcul3ecpm6tc" path="res://assets/models/grave-border.glb" id="15_geams"]
+[ext_resource type="PackedScene" uid="uid://c447xlw0w28kq" path="res://assets/models/grave.glb" id="16_wqfkm"]
+[ext_resource type="PackedScene" uid="uid://b73jymfsnk6v6" path="res://assets/models/gravestone-bevel.glb" id="17_760l3"]
+[ext_resource type="PackedScene" uid="uid://dq3fpf8w1r8jx" path="res://assets/models/gravestone-broken.glb" id="18_el0tn"]
+[ext_resource type="PackedScene" uid="uid://cpcdp0upncqh5" path="res://assets/models/gravestone-cross-large.glb" id="19_80lrr"]
+[ext_resource type="PackedScene" uid="uid://dsvmwedg4u25o" path="res://assets/models/gravestone-cross.glb" id="20_lf062"]
+[ext_resource type="PackedScene" uid="uid://cqsmw5r7w3crd" path="res://assets/models/gravestone-debris.glb" id="21_1xb2j"]
+[ext_resource type="PackedScene" uid="uid://cp8c57arysfnp" path="res://assets/models/gravestone-decorative.glb" id="22_d7hlu"]
+[ext_resource type="PackedScene" uid="uid://cknugtd44dlr5" path="res://assets/models/gravestone-roof.glb" id="23_yytq6"]
+[ext_resource type="PackedScene" uid="uid://6oxh8etphsd7" path="res://assets/models/gravestone-round.glb" id="24_2b5yp"]
+[ext_resource type="PackedScene" uid="uid://bjms1p5gj75cf" path="res://assets/models/gravestone-wide.glb" id="25_nty3x"]
+[ext_resource type="PackedScene" uid="uid://d16xvlkjrbp1s" path="res://assets/models/iron-fence-bar.glb" id="26_4mcic"]
+[ext_resource type="PackedScene" uid="uid://3j8wkau653y3" path="res://assets/models/iron-fence-border-column.glb" id="27_7nn6w"]
+[ext_resource type="PackedScene" uid="uid://c1huh6x6jww23" path="res://assets/models/iron-fence-border-curve.glb" id="28_shq8y"]
+[ext_resource type="PackedScene" uid="uid://hstsw103jpn2" path="res://assets/models/iron-fence-border-gate.glb" id="29_k5oq2"]
+[ext_resource type="PackedScene" uid="uid://d4mlsdkrac0cc" path="res://assets/models/iron-fence-border.glb" id="30_c3mqy"]
+[ext_resource type="PackedScene" uid="uid://teo8mwudu02q" path="res://assets/models/iron-fence-curve.glb" id="31_smqo1"]
+[ext_resource type="PackedScene" uid="uid://bpujqm8ovlqbx" path="res://assets/models/iron-fence-damaged.glb" id="32_1oxel"]
+[ext_resource type="PackedScene" uid="uid://futnb71dahom" path="res://assets/models/iron-fence.glb" id="33_32lnp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f36t4"]
 size = Vector3(0.102539, 0.790039, 0.0994873)
@@ -175,6 +197,72 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stone-wall2/stone-wall/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.326538, -0.44931)
 shape = SubResource("BoxShape3D_vfqg0")
+
+[node name="fence-damaged2" parent="." instance=ExtResource("12_trr02")]
+visible = false
+
+[node name="fence-gate2" parent="." instance=ExtResource("13_e7xs6")]
+visible = false
+
+[node name="fence2" parent="." instance=ExtResource("14_mm7ab")]
+visible = false
+
+[node name="grave-border2" parent="." instance=ExtResource("15_geams")]
+visible = false
+
+[node name="grave2" parent="." instance=ExtResource("16_wqfkm")]
+visible = false
+
+[node name="gravestone-bevel2" parent="." instance=ExtResource("17_760l3")]
+visible = false
+
+[node name="gravestone-broken2" parent="." instance=ExtResource("18_el0tn")]
+visible = false
+
+[node name="gravestone-cross-large2" parent="." instance=ExtResource("19_80lrr")]
+visible = false
+
+[node name="gravestone-cross2" parent="." instance=ExtResource("20_lf062")]
+visible = false
+
+[node name="gravestone-debris2" parent="." instance=ExtResource("21_1xb2j")]
+visible = false
+
+[node name="gravestone-decorative2" parent="." instance=ExtResource("22_d7hlu")]
+visible = false
+
+[node name="gravestone-roof2" parent="." instance=ExtResource("23_yytq6")]
+visible = false
+
+[node name="gravestone-round2" parent="." instance=ExtResource("24_2b5yp")]
+visible = false
+
+[node name="gravestone-wide2" parent="." instance=ExtResource("25_nty3x")]
+visible = false
+
+[node name="iron-fence-bar2" parent="." instance=ExtResource("26_4mcic")]
+visible = false
+
+[node name="iron-fence-border-column2" parent="." instance=ExtResource("27_7nn6w")]
+visible = false
+
+[node name="iron-fence-border-curve2" parent="." instance=ExtResource("28_shq8y")]
+visible = false
+
+[node name="iron-fence-border-gate2" parent="." instance=ExtResource("29_k5oq2")]
+visible = false
+
+[node name="iron-fence-border2" parent="." instance=ExtResource("30_c3mqy")]
+visible = false
+
+[node name="iron-fence-curve2" parent="." instance=ExtResource("31_smqo1")]
+visible = false
+
+[node name="iron-fence-damaged2" parent="." instance=ExtResource("32_1oxel")]
+visible = false
+
+[node name="iron-fence2" parent="." instance=ExtResource("33_32lnp")]
+visible = false
 
 [editable path="Road"]
 [editable path="border-pillar2"]
