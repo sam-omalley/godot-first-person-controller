@@ -7,9 +7,14 @@ extends CharacterBody3D
 @export var jump_impulse: float = 4.5
 @export var sensitivity: float = 0.005
 
+# Head bob
 @export var bob_freq: float = 2.0
 @export var bob_amp: float = 0.08
 var t_bob = 0.0
+
+# FOV
+@export var base_fov: float = 75.0
+@export var fov_change: float = 1.5
 
 @onready var head: Node3D = %Head
 @onready var camera: Camera3D = %Camera3D
@@ -57,6 +62,11 @@ func _physics_process(delta: float) -> void:
 	# Head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
+
+	# FOV
+	var velocity_clamped: float = clamp(velocity.length(), 0.5, run_speed * 2.0)
+	var target_fov: float = base_fov + fov_change * velocity_clamped
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 
 	move_and_slide()
 
