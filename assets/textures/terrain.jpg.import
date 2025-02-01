@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5ql4r1bol5ef"
-path.s3tc="res://.godot/imported/colormap.png-13fedcf3f50948e727985978112a386c.s3tc.ctex"
+uid="uid://d2nkpoo7y2nyb"
+path.s3tc="res://.godot/imported/terrain.jpg-8352dd48c458e5b4ffc9dea18ac8626a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/crypt/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-13fedcf3f50948e727985978112a386c.s3tc.ctex"]
+source_file="res://assets/textures/terrain.jpg"
+dest_files=["res://.godot/imported/terrain.jpg-8352dd48c458e5b4ffc9dea18ac8626a.s3tc.ctex"]
 
 [params]
 

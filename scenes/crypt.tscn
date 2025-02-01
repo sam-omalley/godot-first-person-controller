@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyn5ymcc8y31n"]
+[gd_scene load_steps=9 format=3 uid="uid://cyn5ymcc8y31n"]
 
-[ext_resource type="PackedScene" uid="uid://de5kogndurk3y" path="res://assets/models/crypt/crypt.glb" id="1_eo55a"]
-[ext_resource type="Texture2D" uid="uid://5ql4r1bol5ef" path="res://assets/models/crypt/Textures/colormap.png" id="2_byd4i"]
-[ext_resource type="PackedScene" uid="uid://b0rj27nma6kbn" path="res://assets/models/crypt/cryptDoor.glb" id="4_hxqsp"]
-[ext_resource type="PackedScene" uid="uid://dofvde6asxjvl" path="res://assets/models/crypt/crypt-small-entrance-alternative.glb" id="4_r1a6b"]
+[ext_resource type="PackedScene" uid="uid://de5kogndurk3y" path="res://assets/models/crypt.glb" id="1_eo55a"]
+[ext_resource type="Texture2D" uid="uid://5ql4r1bol5ef" path="res://assets/models/Textures/colormap.png" id="2_byd4i"]
+[ext_resource type="PackedScene" uid="uid://b0rj27nma6kbn" path="res://assets/models/cryptDoor.glb" id="4_hxqsp"]
+[ext_resource type="PackedScene" uid="uid://dofvde6asxjvl" path="res://assets/models/crypt-small-entrance-alternative.glb" id="4_r1a6b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w4qtx"]
 albedo_color = Color(0.309804, 0.317647, 0.270588, 1)
+albedo_texture = ExtResource("2_byd4i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk7y5"]
+albedo_color = Color(0, 0.34902, 0.207843, 1)
 albedo_texture = ExtResource("2_byd4i")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kbgxj"]
@@ -25,6 +29,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w4qtx")
 [node name="crypt-small-entrance-alternative2" parent="." index="1" instance=ExtResource("4_r1a6b")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 3.57669)
 
+[node name="crypt-small-entrance-alternative" parent="crypt-small-entrance-alternative2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fk7y5")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_kbgxj")
@@ -35,4 +42,5 @@ transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -0.579
 [node name="cryptDoor" parent="cryptDoor2" index="0"]
 surface_material_override/1 = SubResource("StandardMaterial3D_148d2")
 
+[editable path="crypt-small-entrance-alternative2"]
 [editable path="cryptDoor2"]

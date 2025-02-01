@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://de5kogndurk3y"
-path="res://.godot/imported/crypt.glb-587214e93a8b5d780f59e105f5e4edbc.scn"
+uid="uid://1e2tm6jntuex"
+path="res://.godot/imported/brick-wall-end.glb-6864cc613eb73d3acbff0c6add60d98b.scn"
 
 [deps]
 
-source_file="res://assets/models/crypt/crypt.glb"
-dest_files=["res://.godot/imported/crypt.glb-587214e93a8b5d780f59e105f5e4edbc.scn"]
+source_file="res://assets/models/brick-wall-end.glb"
+dest_files=["res://.godot/imported/brick-wall-end.glb-6864cc613eb73d3acbff0c6add60d98b.scn"]
 
 [params]
 
-nodes/root_type="StaticBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

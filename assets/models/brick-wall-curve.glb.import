@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b0rj27nma6kbn"
-path="res://.godot/imported/cryptDoor.glb-93264838c1a38c803a7a93a285897f25.scn"
+uid="uid://l0vgrvn6fmxr"
+path="res://.godot/imported/brick-wall-curve.glb-3d6f29827d0a59f77fdeeec42327b60f.scn"
 
 [deps]
 
-source_file="res://assets/models/crypt/cryptDoor.glb"
-dest_files=["res://.godot/imported/cryptDoor.glb-93264838c1a38c803a7a93a285897f25.scn"]
+source_file="res://assets/models/brick-wall-curve.glb"
+dest_files=["res://.godot/imported/brick-wall-curve.glb-3d6f29827d0a59f77fdeeec42327b60f.scn"]
 
 [params]
 

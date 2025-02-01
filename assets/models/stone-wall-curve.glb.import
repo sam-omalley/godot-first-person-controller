@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dofvde6asxjvl"
-path="res://.godot/imported/crypt-small-entrance-alternative.glb-894cc540e4bccdae80250efb44343508.scn"
+uid="uid://c58hl54cjex5g"
+path="res://.godot/imported/stone-wall-curve.glb-c78089ed79dfb19645b02f43a2b70589.scn"
 
 [deps]
 
-source_file="res://assets/models/crypt/crypt-small-entrance-alternative.glb"
-dest_files=["res://.godot/imported/crypt-small-entrance-alternative.glb-894cc540e4bccdae80250efb44343508.scn"]
+source_file="res://assets/models/stone-wall-curve.glb"
+dest_files=["res://.godot/imported/stone-wall-curve.glb-c78089ed79dfb19645b02f43a2b70589.scn"]
 
 [params]
 

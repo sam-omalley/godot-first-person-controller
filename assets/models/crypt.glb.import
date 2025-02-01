@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dsjpx0t1idi38"
-path="res://.godot/imported/crypt-door.glb-5c3e1493f8a475e1d6df1f530be95fab.scn"
+uid="uid://de5kogndurk3y"
+path="res://.godot/imported/crypt.glb-f4dd7a639b4fef9a44f3f27d0ee2054a.scn"
 
 [deps]
 
-source_file="res://assets/models/crypt/crypt-door.glb"
-dest_files=["res://.godot/imported/crypt-door.glb-5c3e1493f8a475e1d6df1f530be95fab.scn"]
+source_file="res://assets/models/crypt.glb"
+dest_files=["res://.godot/imported/crypt.glb-f4dd7a639b4fef9a44f3f27d0ee2054a.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
