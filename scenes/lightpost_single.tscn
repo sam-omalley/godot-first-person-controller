@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://y67nmj1ts7au"]
+
+[ext_resource type="PackedScene" uid="uid://dsjnxm28b8c0p" path="res://assets/models/lightpost-single.glb" id="1_rx5bv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlmli"]
+albedo_color = Color(0.770577, 0.952136, 2.31028e-06, 1)
+emission_enabled = true
+emission = Color(0.805237, 0.935303, 0.198663, 1)
+emission_energy_multiplier = 3.0
+
+[node name="LightpostSingle" instance=ExtResource("1_rx5bv")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="lightpost-single" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0050354, 1.08844, 0.237862)
+material_override = SubResource("StandardMaterial3D_mlmli")
+size = Vector3(0.111755, 0.189331, 0.104904)
