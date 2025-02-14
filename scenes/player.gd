@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var deacceleration: float = 20.0
 @export var jump_impulse: float = 4.5
 @export var sensitivity: float = 0.005
+@export var hit_stagger: float = 8.0
 
 # Head bob
 @export var bob_freq: float = 2.0
@@ -18,6 +19,8 @@ var t_bob = 0.0
 
 @onready var head: Node3D = %Head
 @onready var camera: Camera3D = %Camera3D
+
+signal player_hit
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -75,3 +78,7 @@ func _headbob(time: float) -> Vector3:
 	pos.y = sin(time * bob_freq) * bob_amp
 	pos.x = cos(time * bob_freq / 2.0) * bob_amp
 	return pos
+
+func hit(dir: Vector3) -> void:
+	player_hit.emit()
+	velocity += dir * hit_stagger

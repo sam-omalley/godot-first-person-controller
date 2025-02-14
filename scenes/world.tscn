@@ -1,5 +1,6 @@
-[gd_scene load_steps=29 format=4 uid="uid://cvodg0wbgcqdd"]
+[gd_scene load_steps=30 format=4 uid="uid://cvodg0wbgcqdd"]
 
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_53b2q"]
 [ext_resource type="Texture2D" uid="uid://d2nkpoo7y2nyb" path="res://assets/textures/terrain.jpg" id="2_q8dr1"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="2_ta1kv"]
 [ext_resource type="PackedScene" uid="uid://cyn5ymcc8y31n" path="res://scenes/crypt.tscn" id="3_43ceu"]
@@ -115,11 +116,22 @@ size = Vector2(10, 114.46)
 size = Vector2(10, 115.12)
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_53b2q")
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83539, 0, -1.77658)
 floor_max_angle = 1.0472
 script = ExtResource("2_ta1kv")
+walk_speed = null
+run_speed = null
+deacceleration = null
+jump_impulse = null
+sensitivity = null
+hit_stagger = null
+bob_freq = null
+bob_amp = null
+base_fov = null
+fov_change = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -307,3 +319,45 @@ skeleton = NodePath("")
 [node name="Zombie" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07804, 0, 0)
 player_path = NodePath("../../Player")
+turn_speed = null
+
+[node name="Zombie2" parent="Enemies" instance=ExtResource("10_wjb10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.87988, 9.53674e-07, -7.35509)
+player_path = NodePath("../../Player")
+turn_speed = null
+
+[node name="Zombie3" parent="Enemies" instance=ExtResource("10_wjb10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7795, -9.53674e-07, 5.36915)
+player_path = NodePath("../../Player")
+turn_speed = null
+
+[node name="Zombie4" parent="Enemies" instance=ExtResource("10_wjb10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5226, 0, 6.90307)
+player_path = NodePath("../../Player")
+turn_speed = null
+
+[node name="Zombie5" parent="Enemies" instance=ExtResource("10_wjb10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7062, 0, 9.25724)
+player_path = NodePath("../../Player")
+turn_speed = null
+
+[node name="Zombie6" parent="Enemies" instance=ExtResource("10_wjb10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2994, -9.53674e-07, -2.7904)
+player_path = NodePath("../../Player")
+turn_speed = null
+
+[node name="UI" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HitRect" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1086.0
+color = Color(1, 0, 0, 0.270588)
+
+[connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
