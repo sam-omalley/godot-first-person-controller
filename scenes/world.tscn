@@ -319,32 +319,26 @@ skeleton = NodePath("")
 [node name="Zombie" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07804, 0, 0)
 player_path = NodePath("../../Player")
-turn_speed = null
 
 [node name="Zombie2" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.87988, 9.53674e-07, -7.35509)
 player_path = NodePath("../../Player")
-turn_speed = null
 
 [node name="Zombie3" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7795, -9.53674e-07, 5.36915)
 player_path = NodePath("../../Player")
-turn_speed = null
 
 [node name="Zombie4" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5226, 0, 6.90307)
 player_path = NodePath("../../Player")
-turn_speed = null
 
 [node name="Zombie5" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7062, 0, 9.25724)
 player_path = NodePath("../../Player")
-turn_speed = null
 
 [node name="Zombie6" parent="Enemies" instance=ExtResource("10_wjb10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2994, -9.53674e-07, -2.7904)
 player_path = NodePath("../../Player")
-turn_speed = null
 
 [node name="UI" type="Control" parent="."]
 unique_name_in_owner = true
