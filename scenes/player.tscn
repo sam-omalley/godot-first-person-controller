@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccjukkylhnl7n"]
+[gd_scene load_steps=5 format=3 uid="uid://ccjukkylhnl7n"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_h1k1i"]
+[ext_resource type="PackedScene" uid="uid://dpe0uos5wgvga" path="res://scenes/rifle.tscn" id="2_12hb5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_a04s1"]
 
@@ -33,3 +34,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59801, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 unique_name_in_owner = true
+
+[node name="Rifle" parent="Head/Camera3D" instance=ExtResource("2_12hb5")]
+transform = Transform3D(1, 0, 0, 0, 0.992009, 0.126164, 0, -0.126164, 0.992009, 0.266166, -0.265669, -0.595621)

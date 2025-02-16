@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=4 uid="uid://cvodg0wbgcqdd"]
+[gd_scene load_steps=28 format=4 uid="uid://cvodg0wbgcqdd"]
 
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_53b2q"]
+[ext_resource type="PackedScene" uid="uid://ccjukkylhnl7n" path="res://scenes/player.tscn" id="2_g1qu1"]
 [ext_resource type="Texture2D" uid="uid://d2nkpoo7y2nyb" path="res://assets/textures/terrain.jpg" id="2_q8dr1"]
-[ext_resource type="Script" path="res://scenes/player.gd" id="2_ta1kv"]
 [ext_resource type="PackedScene" uid="uid://cyn5ymcc8y31n" path="res://scenes/crypt.tscn" id="3_43ceu"]
 [ext_resource type="MeshLibrary" uid="uid://dk8yu3sy5j346" path="res://tile_library.tres" id="4_pw7fb"]
 [ext_resource type="PackedScene" uid="uid://bpujqm8ovlqbx" path="res://assets/models/iron-fence-damaged.glb" id="5_r4as1"]
@@ -11,10 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://5ql4r1bol5ef" path="res://assets/models/Textures/colormap.png" id="7_mim0m"]
 [ext_resource type="Script" path="res://global/multi_mesh_angle.gd" id="7_wj5yc"]
 [ext_resource type="PackedScene" uid="uid://cux0tqxqmyd7r" path="res://scenes/zombie.tscn" id="10_wjb10"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_goodh"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e1ywa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1icno"]
 emission_enabled = true
@@ -118,35 +114,8 @@ size = Vector2(10, 115.12)
 [node name="World" type="Node3D"]
 script = ExtResource("1_53b2q")
 
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player" parent="." instance=ExtResource("2_g1qu1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83539, 0, -1.77658)
-floor_max_angle = 1.0472
-script = ExtResource("2_ta1kv")
-walk_speed = null
-run_speed = null
-deacceleration = null
-jump_impulse = null
-sensitivity = null
-hit_stagger = null
-bob_freq = null
-bob_amp = null
-base_fov = null
-fov_change = null
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_goodh")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_e1ywa")
-
-[node name="Head" type="Node3D" parent="Player"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59801, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Player/Head"]
-unique_name_in_owner = true
 
 [node name="Environment" type="Node3D" parent="."]
 
@@ -353,5 +322,3 @@ layout_mode = 0
 offset_right = 1928.0
 offset_bottom = 1086.0
 color = Color(1, 0, 0, 0.270588)
-
-[connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
