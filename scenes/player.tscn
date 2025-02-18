@@ -8,17 +8,9 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e1ywa"]
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 9
 script = ExtResource("1_h1k1i")
-walk_speed = null
-run_speed = null
-deacceleration = null
-jump_impulse = null
-sensitivity = null
-hit_stagger = null
-bob_freq = null
-bob_amp = null
-base_fov = null
-fov_change = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -36,4 +28,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59801, 0)
 unique_name_in_owner = true
 
 [node name="Rifle" parent="Head/Camera3D" instance=ExtResource("2_12hb5")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.992009, 0.126164, 0, -0.126164, 0.992009, 0.266166, -0.265669, -0.595621)

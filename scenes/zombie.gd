@@ -12,11 +12,19 @@ var state_machine
 @onready var nav_agent: NavigationAgent3D = %NavigationAgent3D
 @onready var anim_tree : AnimationTree = %AnimationTree
 
+var health = 6
+
 func _ready() -> void:
 	player = get_node(player_path)
 	state_machine = anim_tree.get("parameters/playback")
 	visible = false
 	anim_tree.set("parameters/conditions/alive", false)
+
+	var body_parts = $Armature/Skeleton3D.get_children()
+	for b in body_parts:
+		if b.is_in_group('BodyParts'):
+			var area = b.get_node('Area3D')
+			area.body_part_hit.connect(_on_body_part_hit)
 
 func _process(delta: float) -> void:
 	velocity = Vector3.ZERO
@@ -53,3 +61,9 @@ func _hit_finished():
 	if global_position.distance_to(player.global_position) < attack_range + 1.0:
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
+
+func _on_body_part_hit(damage) -> void:
+	health -= damage
+
+	if health <= 0:
+		queue_free()

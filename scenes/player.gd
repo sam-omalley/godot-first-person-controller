@@ -17,8 +17,14 @@ var t_bob = 0.0
 @export var base_fov: float = 75.0
 @export var fov_change: float = 1.5
 
+# Bullets
+var bullet = load("res://scenes/bullet.tscn")
+var instance
+
 @onready var head: Node3D = %Head
 @onready var camera: Camera3D = %Camera3D
+@onready var gun_anim: AnimationPlayer = %Rifle/AnimationPlayer
+@onready var gun_barrel: RayCast3D = %Rifle/RayCast3D
 
 signal player_hit
 
@@ -70,6 +76,15 @@ func _physics_process(delta: float) -> void:
 	var velocity_clamped: float = clamp(velocity.length(), 0.5, run_speed * 2.0)
 	var target_fov: float = base_fov + fov_change * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+
+	# Shooting
+	if Input.is_action_pressed('Shoot'):
+		if not gun_anim.is_playing():
+			gun_anim.play('Shoot')
+			instance = bullet.instantiate()
+			instance.position = gun_barrel.global_position
+			instance.transform.basis = gun_barrel.global_transform.basis
+			get_parent().add_child(instance)
 
 	move_and_slide()
 
