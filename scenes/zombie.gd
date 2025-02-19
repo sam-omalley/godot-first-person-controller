@@ -11,6 +11,7 @@ var state_machine
 
 @onready var nav_agent: NavigationAgent3D = %NavigationAgent3D
 @onready var anim_tree : AnimationTree = %AnimationTree
+@onready var collision_shape: CollisionShape3D = $CollisionShape3D
 
 var health = 6
 
@@ -36,14 +37,17 @@ func _process(delta: float) -> void:
 			velocity = (next_nav_point - global_position).normalized() * speed
 
 			rotation.y = lerp_angle(rotation.y, atan2(-velocity.x, -velocity.z), delta * turn_speed)
+			collision_shape.disabled = false
 		"Attack":
 			var look_vec: Vector3 = player.global_position
 			look_vec.y = global_position.y
 			look_at(look_vec)
+			collision_shape.disabled = false
 		"Stand Up":
 			var look_vec: Vector3 = player.global_position
 			look_vec.y = global_position.y
 			look_at(look_vec, Vector3.UP)
+			collision_shape.disabled = true
 
 	
 	anim_tree.set("parameters/conditions/attack", _target_in_range(attack_range))
@@ -67,5 +71,6 @@ func _on_body_part_hit(damage) -> void:
 
 	if health <= 0:
 		anim_tree.set("parameters/conditions/dead", true)
+		collision_shape.disabled = true
 		await anim_tree.animation_finished
 		queue_free()

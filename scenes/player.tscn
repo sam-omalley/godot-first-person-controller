@@ -10,6 +10,7 @@
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 4
 collision_mask = 9
+floor_max_angle = 1.0472
 script = ExtResource("1_h1k1i")
 walk_speed = null
 run_speed = null

@@ -74,12 +74,12 @@ func _physics_process(delta: float) -> void:
 	var target_fov: float = base_fov + fov_change * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 
+	move_and_slide()
 	# Shooting
 	if Input.is_action_pressed('Shoot'):
 		gun_left.shoot(get_parent(), gun_left.global_position, gun_left.global_transform.basis)
 		gun_right.shoot(get_parent(), gun_right.global_position, gun_right.global_transform.basis)
 
-	move_and_slide()
 
 func _headbob(time: float) -> Vector3:
 	var pos = Vector3.ZERO
