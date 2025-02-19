@@ -66,4 +66,6 @@ func _on_body_part_hit(damage) -> void:
 	health -= damage
 
 	if health <= 0:
+		anim_tree.set("parameters/conditions/dead", true)
+		await anim_tree.animation_finished
 		queue_free()

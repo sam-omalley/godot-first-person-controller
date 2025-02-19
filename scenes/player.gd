@@ -17,14 +17,11 @@ var t_bob = 0.0
 @export var base_fov: float = 75.0
 @export var fov_change: float = 1.5
 
-# Bullets
-var bullet = load("res://scenes/bullet.tscn")
-var instance
-
 @onready var head: Node3D = %Head
 @onready var camera: Camera3D = %Camera3D
-@onready var gun_anim: AnimationPlayer = %Rifle/AnimationPlayer
-@onready var gun_barrel: RayCast3D = %Rifle/RayCast3D
+
+@onready var gun_left = %GunLeft
+@onready var gun_right = %GunRight
 
 signal player_hit
 
@@ -79,12 +76,8 @@ func _physics_process(delta: float) -> void:
 
 	# Shooting
 	if Input.is_action_pressed('Shoot'):
-		if not gun_anim.is_playing():
-			gun_anim.play('Shoot')
-			instance = bullet.instantiate()
-			instance.position = gun_barrel.global_position
-			instance.transform.basis = gun_barrel.global_transform.basis
-			get_parent().add_child(instance)
+		gun_left.shoot(get_parent(), gun_left.global_position, gun_left.global_transform.basis)
+		gun_right.shoot(get_parent(), gun_right.global_position, gun_right.global_transform.basis)
 
 	move_and_slide()
 

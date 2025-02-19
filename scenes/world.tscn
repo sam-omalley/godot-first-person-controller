@@ -116,6 +116,16 @@ script = ExtResource("1_53b2q")
 
 [node name="Player" parent="." instance=ExtResource("2_g1qu1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83539, 0, -1.77658)
+walk_speed = null
+run_speed = null
+deacceleration = null
+jump_impulse = null
+sensitivity = null
+hit_stagger = null
+bob_freq = null
+bob_amp = null
+base_fov = null
+fov_change = null
 
 [node name="Environment" type="Node3D" parent="."]
 
