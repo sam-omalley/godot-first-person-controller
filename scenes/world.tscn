@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=4 uid="uid://cvodg0wbgcqdd"]
 
-[ext_resource type="Script" path="res://scenes/world.gd" id="1_53b2q"]
+[ext_resource type="Script" uid="uid://cee6dvltqsbvr" path="res://scenes/world.gd" id="1_53b2q"]
 [ext_resource type="PackedScene" uid="uid://ccjukkylhnl7n" path="res://scenes/player.tscn" id="2_g1qu1"]
 [ext_resource type="Texture2D" uid="uid://d2nkpoo7y2nyb" path="res://assets/textures/terrain.jpg" id="2_q8dr1"]
 [ext_resource type="PackedScene" uid="uid://cyn5ymcc8y31n" path="res://scenes/crypt.tscn" id="3_43ceu"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://y67nmj1ts7au" path="res://scenes/lightpost_single.tscn" id="6_n1kc5"]
 [ext_resource type="PackedScene" uid="uid://bvm8ske40jnlb" path="res://scenes/cinematic_lighting.tscn" id="7_ls3kj"]
 [ext_resource type="Texture2D" uid="uid://5ql4r1bol5ef" path="res://assets/models/Textures/colormap.png" id="7_mim0m"]
-[ext_resource type="Script" path="res://global/multi_mesh_angle.gd" id="7_wj5yc"]
+[ext_resource type="Script" uid="uid://p8pgegt4yhng" path="res://global/multi_mesh_angle.gd" id="7_wj5yc"]
 [ext_resource type="PackedScene" uid="uid://cux0tqxqmyd7r" path="res://scenes/zombie.tscn" id="10_wjb10"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1icno"]

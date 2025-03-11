@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dpe0uos5wgvga"]
 
 [ext_resource type="PackedScene" uid="uid://cype8vogk43gx" path="res://assets/weapons/Steampunk Rifle.glb" id="1_nqroy"]
-[ext_resource type="Script" path="res://scenes/rifle.gd" id="2_guaup"]
+[ext_resource type="Script" uid="uid://bff164eimejcf" path="res://scenes/rifle.gd" id="2_guaup"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh3f7"]
 albedo_color = Color(0.513233, 0.513233, 0.513233, 1)
@@ -47,8 +47,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3i3f0"]
 _data = {
-"RESET": SubResource("Animation_s4w4v"),
-"Shoot": SubResource("Animation_i7uo7")
+&"RESET": SubResource("Animation_s4w4v"),
+&"Shoot": SubResource("Animation_i7uo7")
 }
 
 [node name="Rifle" instance=ExtResource("1_nqroy")]
